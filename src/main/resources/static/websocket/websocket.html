@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>socket</title>
+</head>
+<body>
+<div>
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+    </div>
+    <div id="conversationDiv">
+        <p>
+            <label>notice content?</label>
+        </p>
+        <p>
+            <textarea id="content" rows="5"></textarea>
+        </p>
+        <button id="sendName" onclick="sendName();">Send</button>
+        <p id="response"></p>
+    </div>
+</div>
+<script src="../base/socket/sockjs.js"></script>
+<script src="../base/socket/stomp.js"></script>
+<script src="../websocket/websocket.js"></script>
+</body>
+</html>
