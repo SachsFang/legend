@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.socket.AbstractSecurit
 import org.springframework.web.socket.config.annotation.AbstractWebSocketMessageBrokerConfigurer;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
 /**
  * Created by SachsFang on 2021/5/19 20:00
@@ -14,7 +15,7 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 
 @Configuration
 @EnableWebSocketMessageBroker
-public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
+public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/socket").withSockJS();
